@@ -12,6 +12,7 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 import { prisma } from "@/server/db";
 import { initServices } from "./services";
+import "reflect-metadata";
 
 /**
  * 1. CONTEXT
