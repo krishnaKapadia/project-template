@@ -4,7 +4,7 @@ import { api } from "@/utils/api";
 
 export default function Home() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
-
+  const test = api.example.test.useQuery();
   return (
     <>
       <Head>
@@ -43,6 +43,11 @@ export default function Home() {
           </div>
           <p className="text-2xl text-white">
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+          </p>
+          <p className="text-2xl text-white">
+            {test.data
+              ? test.data
+              : "Loading Dependency injected service query..."}
           </p>
         </div>
       </main>
